@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1E293B">
+  <title>SkillForge - IT Competency Assessment, CV Gap Analysis, and Market-Aligned Course Planner</title>
+  <meta name="description" content="SkillForge provides enterprise IT competency assessments, automated CV gap analysis, and market-aligned course planning for engineers and IT professionals.">
+  <meta property="og:title" content="SkillForge - IT Competency Assessment, CV Gap Analysis, and Market-Aligned Course Planner">
+  <meta property="og:description" content="Enterprise platform for technical skill validation, diagnostic benchmarking, and curriculum planning.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Site Header Navigation -->
+  <header class="site-header">
+    <div class="header-container container">
+      <div class="header-brand">
+        <a href="#/dashboard" class="brand-link" id="site-logo" aria-label="SkillForge Home">
+          <svg class="brand-icon" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+            <rect width="32" height="32" rx="4" fill="#1E293B"/>
+            <path d="M10 11 L5 16 L10 21" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M13.5 22 L18.5 10" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M22 11 L27 16 L22 21" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="brand-name">SkillForge</span>
+        </a>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary Navigation">
+        <a href="#/dashboard" class="nav-link" data-route="#/dashboard">Dashboard</a>
+        <a href="#/assessments" class="nav-link" data-route="#/assessments">Assessments</a>
+        <a href="#/courses" class="nav-link" data-route="#/courses">Courses</a>
+        <a href="#/market-trends" class="nav-link" data-route="#/market-trends">Market Trends</a>
+        <a href="#/admin" class="nav-link admin-nav-link d-none" data-route="#/admin" id="nav-admin-link">Admin</a>
+      </nav>
+
+      <div class="user-panel" id="header-user-panel">
+        <div class="user-meta" id="user-info-display">
+          <span class="user-name" id="user-display-name">Guest</span>
+          <span class="badge badge-neutral" id="user-display-role">Not authenticated</span>
+        </div>
+        <div class="user-controls">
+          <button type="button" class="btn btn-sm btn-secondary" id="auth-action-btn">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Primary Application View Area -->
+  <main id="main-content-area" class="main-content container" role="main"></main>
+
+  <!-- Notification Toasts Layer -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Global Modal Dialog Layer -->
+  <div id="modal-container" class="modal-container" aria-hidden="true"></div>
+
+  <!-- Global Loading Indicator Overlay -->
+  <div id="loading-overlay" class="loading-overlay d-none" aria-hidden="true">
+    <div class="spinner-card">
+      <div class="spinner"></div>
+      <p class="spinner-label" id="loading-text">Loading...</p>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container container">
+      <div class="footer-summary">
+        <p class="footer-desc">SkillForge provides verified IT competency benchmarks, diagnostic assessment tooling, and curriculum planning for technical professionals.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#/privacy-policy" class="footer-link">Privacy Policy</a>
+        <span class="footer-divider" aria-hidden="true">|</span>
+        <a href="#/terms-and-conditions" class="footer-link">Terms and Conditions</a>
+      </div>
+      <div class="footer-legal">
+        <p class="footer-copy">&copy; 2026 SkillForge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Modules -->
+  <script type="module" src="db/database.js"></script>
+  <script type="module" src="api/api-router.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/router.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
